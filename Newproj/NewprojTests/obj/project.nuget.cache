@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "WEWwr+VfxOQzygvKiRTASHOrDAYdKn6WIaV3ebtDI+biO6WNUYhr8maG2OkTd3BljroNOvKuv2ah6BLyCNEeUg==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Dell\\Source\\Repos\\E-cart\\Newproj\\NewprojTests\\NewprojTests.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project Newproj is not compatible with netcoreapp3.1 (.NETCoreApp,Version=v3.1). Project Newproj supports: net5.0 (.NETCoreApp,Version=v5.0)",
+      "libraryId": "Newproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+﻿@model List<Newproj.Models.Assistant>
+
+@{
+
+    Layout = null;
+
+}
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+        .card {
+  flex-direction: row;
+  align-items: center;
+}
+.card-title {
+  font-weight: bold;
+}
+.card img {
+  width: 85%;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: calc(0.25rem - 1px);
+}
+@@media only screen and (max-width: 768px) {
+  a {
+    display: none;
+  }
+  .card-body {
+    padding: 0.5em 1.2em;
+  }
+  .card-body .card-text {
+    margin: 0;
+  }
+  .card img {
+    width: 50%;
+  }
+}
+@@media only screen and (max-width: 1200px) {
+  .card img {
+    width: 40%;
+  }
+}
+</style>
+<div class="card">
+    <img src="~/images/g1.jpg" class="card-img-top" />
+    <div class="card-body">
+        <h2 class="card-title">MECHANIC SERVICES :</h2>
+        <h4 class="card-text">
+            A mechanic is responsible for inspecting and repairing vehicles, machinery, and light trucks. Also known as service technicians, these professionals oversee maintenance inspections, monitor inventory, assemble mechanical components, and perform repairs..
+        </h4>
+        <a href="#" class="btn btn-primary">Booking</a>
+    </div>
+</div>
+
+<section class="team py-lg-5 py-md-4 py-md-3 py-2">
+    <div class="team gallery-ban py-lg-5 py-md-4 py-md-3 py-2" id="team">
+        <div class="container">
+
+            <h3 class="heading mb-lg-4 mb-md-3 mb-sm-2 mb-2">Team</h3>
+            <ul id="flexiselDemo1">
+                // @*foreach (var item in Model)//
+                    {
+                        <li>
+                            <div class="wthree_testimonials_grid_main">
+
+                                <img src="~/images/t1.jpg" alt=" " class="Img-fluid" />
+                                <div class="teaminfo">
+                                    <h4>@Html.DisplayFor(modelItem => item.Username)</h4>
+                                    <p>@Html.DisplayFor(modelItem => item.Phoneno)</p>
+
+                                </div>
+                            </div>
+                        </li>
+                    }*@
+            </ul>
+
+
+
+
+        </div>
+    </div>
+</section>
+</html>
+
+
+<section class="team py-lg-5 py-md-4 py-md-3 py-2">
+    <div class="team gallery-ban py-lg-5 py-md-4 py-md-3 py-2" id="team">
+        <div class="container">
+            <h3 class="heading mb-lg-4 mb-md-3 mb-sm-2 mb-2">Search above and book here</h3>
+            <form class="heading mb-lg-2 mb-md-2 mb-sm-2" style="text-align: center;">
+                <div class="form-group">
+
+                    <select name="City" class="form-control" asp-items="ViewBag.CityId"></select>
+                </div>
+                <div class="form-group">
+
+                    <select name="Profession" class="form-control" asp-items="ViewBag.ProfId"></select>
+                </div>
+                @*<div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>*@
+
+
+                <button class="btn btn-outline-success form-control" type="submit">Search</button>
+            </form>
+
+
+            <ul id="flexiselDemo1">
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <div class="wthree_testimonials_grid_main">
+
+                            <img src="@("~/UpImage/"+item.ImageName)" asp-append-version="true" class="img-fluid" width="250px" height="250px" />
+                            <div class="teaminfo">
+                                <h4>@Html.DisplayFor(modelItem => item.Username)</h4>
+
+                                <h5>
+                                    @Html.DisplayFor(modelItem => item.Profession.ProfessionName)
+                                </h5>
+                                <a asp-controller="Bookings" asp-action="Create" name="Usernmae" asp-route-name="@item.Username" class="btn btn-primary">Book</a>
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+
+
+
+
+        </div>
+    </div>
+</section>
+
+

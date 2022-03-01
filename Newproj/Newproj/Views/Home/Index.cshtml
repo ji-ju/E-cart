@@ -1,0 +1,203 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<section class="bannerbottom py-lg-5 py-md-4 py-md-3 py-2">
+    <div class="bannerbottom py-lg-5 py-md-4 py-md-3 py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 w3_ban1">
+                    <div class="card">
+                        <img class="card-img-top" src="images/bb1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Carpenter</h5>
+                            <p class="card-text"> A worker who builds or repairs wooden structures or their structural parts to follow the trade of a carpenter</p>
+                            <a asp-controller="Assistants" asp-action="Carpenter" class="btn btn-info">Start Your Booking</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 w3_ban1">
+                    <div class="card">
+                        <img class="card-img-top" src="images/bb2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Plumber</h5>
+                            <p class="card-text">A person who fits and repairs the pipes, fittings, and other apparatus of water supply, sanitation, or heating systems.</p>
+                            <a asp-controller="Assistants" asp-action="Plumber" class="btn btn-info">Start Your Booking</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 w3_ban1">
+                    <div class="card">
+                        <img class="card-img-top" src="images/bb3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Electrician</h5>
+                            <p class="card-text">Electrician definition, a person who installs, operates, maintains, or repairs electric devices or electrical wiring.</p>
+                            <a asp-controller="Assistants" asp-action="Electrician" class="btn btn-info">Start Your Booking</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 w3_ban">
+                    <div class="card">
+                        <img class="card-img-top" src="images/bb4.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Mechanic</h5>
+                            <p class="card-text">A person who repairs and maintains machinery, motors, a worker who is skilled in the use of tools, machines, equipment.</p>
+                            <a asp-controller="Assistants" asp-action="Mechanic" class="btn btn-info">Start Your Booking</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 w3_ban">
+                    <div class="card">
+                        <img class="card-img-top" src="images/bb5.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Painter</h5>
+                            <p class="card-text">A painter is an artist who paints pictures countable noun and painter is someone who paints walls, doors.</p>
+                            <a asp-controller="Assistants" asp-action="Painter" class="btn btn-info">Start Your Booking</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 w3_ban">
+                    <div class="card">
+                        <img class="card-img-top" src="images/bb9.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Gardener</h5>
+                            <p class="card-text">Gardener responsibilities like greenscapes, trimming trees and shrubs, fertilizing,weeding gardens.</p>
+                            <a asp-controller="Assistants" asp-action="Gardener" class="btn btn-info">Start Your Booking</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mission py-lg-5 py-md-4 py-md-3 py-2">
+    <div class="mission py-lg-5 py-md-4 py-md-3 py-2">
+        <div class="row">
+            <div class="col-md-3 col-sm-12 w3_ms8">
+                <img src="~/images/slid.jpg" alt="xt" class="img-fluid">
+            </div>
+            <div class="col-md-3 col-sm-12 w3_ms1">
+                <h4 class="mb-lg-4 mb-md-3 mb-sm-2 mb-2">Our Mission</h4>
+                <p>Serving 24x7 to our customer is top motto of OHS. Now get services at your door anytime, anywhere.</p>
+            </div>
+            <div class="col-md-6 col-sm-12 w3_ms3">
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                    <!-- Full-width slides/quotes -->
+                    <div class="mySlides">
+                        <i class="fa fa-users" style="font-size:80px;"></i>
+                        <h4>"Verified Professionals"</h4>
+
+                    </div>
+
+                    <div class="mySlides">
+                        <i class="fa fa-home" style="font-size:80px;"></i>
+                        <h4>"Insured Work"</h4>
+
+                    </div>
+
+                    <div class="mySlides">
+                        <i class="fa fa-laptop" style="font-size:80px;"></i>
+                        <h4>"Professional Support"</h4>
+
+                    </div>
+
+                    <!-- Next/prev buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-12 w3_ms7">
+                <h4 class="mb-lg-4 mb-md-3 mb-sm-2 mb-2">Our Creative</h4>
+                <p>Easy booking, On-time service delivery, cutting edge resolution through expert hands on Pocket friendly cost.</p>
+            </div>
+            <div class="col-md-3 col-sm-12 w3_ms">
+                <div class="row inner_stat_wthree_agileits">
+
+                    <div class="col-md-6 stats_left counter_grid2">
+                        <i class="far fa-edit"></i>
+                        <p class="counter">40</p>
+                        <h4>Assistants</h4>
+                    </div>
+                    <div class="col-md-6 stats_left counter_grid3">
+                        <i class="far fa-smile"></i>
+                        <p class="counter">10</p>
+                        <h4>Bookings</h4>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-12 w3_ms6">
+                <img src="~/images/BGimg.jpg" alt="xt" class="img-fluid">
+            </div>
+            <div class="col-md-3 col-sm-12 w3_ms4">
+                <h4 class="mb-lg-4 mb-md-3 mb-sm-2 mb-2">Our Vision</h4>
+                <p> From switch replacement to complete home renovation, we provide expert hands to every home complication.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- //team -->
+<!-- Contact -->
+<section class="contact py-lg-5 py-md-4 py-md-3 py-2">
+    <div class="container py-lg-5 py-md-4 py-md-3 py-2">
+        <div class="w3_mg">
+            <h3>Online Home Service</h3>
+            <p class=" my-lg-4 my-md-3 my-sm-2 my-2"></p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Conatct Page
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Fast Service</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="contact" id="contact">
+                                <div class="container">
+                                    <h3 class="title clr">CONTACT FORM</h3>
+                                    <div class=" contact-form">
+                                        <form action="#" method="post">
+                                            <div class="row contact-bothside-agileinfo">
+                                                <div class="col-md-6 col-sm-6 col-xs-6 form-right form-left">
+                                                    <input type="text" name="Name" placeholder="Name" required="">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-6 form-right ">
+                                                    <input type="text" name="Last name" placeholder="Last name" required="">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-6 form-right form-left">
+                                                    <input type="email" name="Email" placeholder="Email" required="">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-6 form-right ">
+                                                    <input type="text" name="phone" placeholder="Phone" required="">
+                                                </div>
+                                                <textarea name="Message" placeholder="Message" required=""></textarea>
+                                                <input type="submit" value="SUBMIT">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Conatct -->

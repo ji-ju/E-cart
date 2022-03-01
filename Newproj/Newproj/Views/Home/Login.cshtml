@@ -1,0 +1,46 @@
+﻿@model Newproj.Models.Assistant
+
+
+<div id="myModal" aria-labelledby="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                Online Home Service
+
+            </div>
+            <section>
+                <div class="modal-body">
+                    <div class="loginf_module">
+                        <div class="module form-module">
+                            <div class="toggle">
+
+                                <div class="tooltip">For Assistant purpose </div>
+
+                            </div>
+
+
+                            <div class="form">
+                                <h3>User account</h3>
+                                <form asp-action="Login" asp-controller="Home" method="post">
+                                    <input type="text" name="Username" asp-for="Username" placeholder="Username" required="">
+                                    <input type="password" name="Pwd" asp-for="Pwd" placeholder="Password" required="">
+                                    <input type="submit" value="Login">
+                                </form>
+                                <div class="cta">
+                                    <a href="#">Forgot password?</a>
+                                </div>
+                            </div>
+                         
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

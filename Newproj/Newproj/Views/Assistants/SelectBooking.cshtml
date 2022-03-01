@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Newproj.Models.Assistant>
+
+@{
+    ViewData["Title"] = "Select Assistant";
+}
+
+<section class="team py-lg-5 py-md-4 py-md-3 py-2">
+    <div class="team gallery-ban py-lg-5 py-md-4 py-md-3 py-2" id="team">
+        <div class="container">
+            <h3 class="heading mb-lg-4 mb-md-3 mb-sm-2 mb-2">Search above and book here</h3>
+            <form class="heading mb-lg-2 mb-md-2 mb-sm-2" style="text-align: center;">
+                <div class="form-group">
+
+                    <select name="City" class="form-control" asp-items="ViewBag.CityId"></select>
+                </div>
+                <div class="form-group">
+
+                    <select name="Profession" class="form-control" asp-items="ViewBag.ProfId"></select>
+                </div>
+                @*<div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>*@
+
+
+                <button class="btn btn-outline-success form-control" type="submit">Search</button>
+            </form>
+
+
+            <ul id="flexiselDemo1">
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <div class="wthree_testimonials_grid_main">
+
+                            <img src="@("~/UpImage/"+item.ImageName)" asp-append-version="true" class="img-fluid" width="250px" height="250px" />
+                            <div class="teaminfo">
+                                <h4>@Html.DisplayFor(modelItem => item.Username)</h4>
+
+                                <h5>
+                                    @Html.DisplayFor(modelItem => item.Profession.ProfessionName)
+                                </h5>
+                                <a asp-controller="Bookings" asp-action="Create" name="Usernmae" asp-route-name="@item.Username" class="btn btn-primary">Book</a>
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+
+
+
+
+        </div>
+    </div>
+</section>

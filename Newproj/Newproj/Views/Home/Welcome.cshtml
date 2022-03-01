@@ -1,0 +1,101 @@
+﻿@model IEnumerable<Newproj.Models.Booking>
+@{ViewData["Title"] = "Welcome";
+}
+
+<div>
+    <h2>Welcome @ViewBag.Username</h2>
+</div>
+<h1>Index</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssistantName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profession)
+            </th>
+            <th>
+                Status
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssistantName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City.CityName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Profession.ProfessionName)
+                </td>
+                <td>
+                    @{ if (@item.Status == null)
+                        {
+                            <div id="myDiv">
+                                <a asp-controller="Home" asp-action="Email" asp-route-Status="Accept" asp-route-email="@item.Email" asp-route-id="@item.BookingId" class="btn btn-success">Accept</a>
+                                <a asp-controller="Home" asp-action="Email" asp-route-Status="Reject" asp-route-email="@item.Email" asp-route-id="@item.BookingId" class="btn btn-danger">Reject</a>
+                            </div>
+                        }
+                        else
+                        {
+
+                            <p>
+                                <b>
+                                    @if (@item.Status == "Accept")
+                                    {
+                                        <span class="text-success">@Html.DisplayFor(modelItem => item.Status)</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger"> @Html.DisplayFor(modelItem => item.Status)</span>
+                                    }
+                                </b>
+                            </p>
+                        }
+                    }
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
